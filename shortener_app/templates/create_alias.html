@@ -1,0 +1,17 @@
+<html>
+<body>
+{% if request.GET.created_alias %}
+  <div>
+      Shortcut added! The short URL is:
+      <a href="{% url 'redirect' alias=request.GET.created_alias %}">
+          http://127.0.0.1:8000/{{ request.GET.created_alias }}
+      </a>
+  </div>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    <table>{{ form }}</table>
+    <input type="submit" value="Generate Alias">
+</form>
+</body>
+</html>

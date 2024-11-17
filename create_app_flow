@@ -1,0 +1,36 @@
+1. Creează aplicația nouă
+În terminal, rulează comanda:
+
+django-admin startapp magazin
+
+
+2. Configurează aplicația nouă
+În fișierul settings.py al proiectului, adaugă aplicația în lista INSTALLED_APPS:
+
+INSTALLED_APPS = [
+    ...,
+    'magazin',
+]
+
+3. Definirea modelelor în models.py
+În fișierul magazin/models.py, adaugă modelele/ clasele
+
+
+4. Migrează modelele în baza de date
+Generează și aplică migrațiile:
+
+
+python manage.py makemigrations magazin
+python manage.py migrate
+
+
+5. Creează vizualizările în views.py
+În fișierul magazin/views.py, definește vizualizările pentru afișarea listelor și detaliilor
+
+
+6. Configurează URL-urile
+
+
+7. Creează șabloanele HTML
+
+8. Testeaza aplicatia
